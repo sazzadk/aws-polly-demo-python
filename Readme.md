@@ -83,7 +83,10 @@ In the search button below, enter ‘*’ and click submit. The screen should up
 Run destroy_stack.sh script to delete the entire stack. All output would go to the Logfile as before and can be used for debugging.
 You can also use the AWS console to verify if all clean up is completed.
 
-## Credits to be mentioned ##
+## Stuff to add ##
+Test scripts are in progress.
+
+### Credits to be mentioned ###
 The lambda text to mp3 polly function is from a course I took from acloudguru.com, but you can also find similar functions on AWS documentation.
 
 
