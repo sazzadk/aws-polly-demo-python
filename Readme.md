@@ -10,7 +10,7 @@ Once the mp3 for the submitted text is ready, user can play the file from the we
 
 The API GET function allows a search of all available transcriptions.
 ### Tutorial based approach and coding ###
-Wanted to make this as easy to follow as possible for anyone starting out learning AWS services and python. The scripts are numbered sequeunces to make it easy to follow. When it comes to API gateway and IAM, AWS automates a lot of configuration behind the scene which is difficult to find even in AWS API documentation. CORS is one such setup.
+Wanted to make this as easy to follow as possible for anyone starting out learning AWS services and python. The scripts are numbered sequences to make it easy to follow. When it comes to API gateway and IAM, AWS automates a lot of configuration behind the scene which is difficult to find even in AWS API documentation. CORS is one such setup.
 
 The scripts for API gateway try to add some examples and documents to help understand the concepts.
 ## Architecture ##
