@@ -2,13 +2,11 @@
 
 if [ -z "$LAMBDA_POLICY" ]
 then
-	export LAMBDA_POLICY="sk-lambda-policy"
 	echo "Please set LAMBDA_POLICY env var to policy name"
 	exit 1
 fi
 if [ -z "$LAMBDA_ROLE" ]
 then
-	export LAMBDA_ROLE="sk-lambda-role"
 	echo "Please set LAMBDA_ROLE env var to policy name"
 	exit 1
 fi
