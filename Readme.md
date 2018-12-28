@@ -85,6 +85,9 @@ In the search button below, enter ‘*’ and click submit. The screen should up
 
 ## Destroying the Stack ##
 Run destroy_stack.sh script to delete the entire stack. All output would go to the Logfile as before and can be used for debugging.
+```
+./destroy_stack.sh
+```
 You can also use the AWS console to verify if all clean up is completed.
 
 ## Stuff to add ##
