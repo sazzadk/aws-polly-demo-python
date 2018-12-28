@@ -17,23 +17,6 @@ lam = boto3.client('lambda')
 sns = boto3.client('sns')
 topic_name=os.environ.get('TOPIC_NAME', 'new_polly_events')
 
-'''
-policy = "{"Version":"2012-10-17",
-		"Id":"default",
-		"Statement":[
-			{"Sid":"lambda-43c3a095-abd0-4bdf-9fd5-xxxxx",
-			 "Effect":"Allow",
-   			 "Principal":
-				{"Service":"sns.amazonaws.com"},
-			 "Action":"lambda:InvokeFunction",
-			 "Resource":"arn:aws:lambda:us-east-1:xxxxx:function:PostReader_ConvertToAudio",
-			 "Condition":{"ArnLike":
-					{"AWS:SourceArn":"arn:aws:sns:us-east-1:xxxx:new_posts"}
-				     }
-			}
-		]
-	   }"
-'''
 function_name = 'PostReader_ConvertToAudio'
 res = lam.get_function(FunctionName=function_name)
 function_arn = res['Configuration']['FunctionArn']
@@ -53,15 +36,6 @@ fname = f'Adding IAM permission for SNS to invoke Lambda function {function_name
 myutils.myprint ('INFO', fname, response)
 #print (json.dumps(response, indent=4, sort_keys=True, default=str))
 
-'''
- {
-            "SubscriptionArn": "arn:aws:sns:us-east-1:xxxxxx:new_posts:1f4c82a1-4a02-4650-8a03-xxxx",
-            "Owner": "xxxxxx",
-            "Protocol": "lambda",
-            "Endpoint": "arn:aws:lambda:us-east-1:xxxxx:function:PostReader_ConvertToAudio",
-            "TopicArn": "arn:aws:sns:us-east-1:xxxxxx:new_posts"
-        }
-'''
 # set the sns subscription for the lambda function
 response = sns.subscribe(
     TopicArn=topic_arn,
