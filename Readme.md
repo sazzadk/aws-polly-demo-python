@@ -9,7 +9,8 @@ The text is sent to the API gateway and then to the Lambda function to process a
 Once the mp3 for the submitted text is ready, user can play the file from the website.
 
 The API GET function allows a search of all available transcriptions.
-
+## Architecture ##
+![Data flow](architecture.png)
 ### AWS Components used ###
 * DynamoDB
 * SNS
